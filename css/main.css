@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../imgs/blue-darkbg.jpg');
+    background-size: cover;
+}
+
+*{
+    color: #FFF;
+}
+
+.crud-form h1{
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 30px;
+    text-shadow: 10px 15px 5px #010010;
+}
+.page-alert{
+    font-size: 27px;
+    background-color: #0a58ca29;
+    color: rgb(197, 18, 18);
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 3px solid #0000254a
+    
+}
+.crud-form .form-group{
+    margin: 10px 0;
+    background-color: rgb(0 0 0 / 39%);
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+.crud-form .form-group label{
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFF;
+}
+.crud-form .form-group input,
+.crud-form .form-group textarea{
+    margin-top: 10px;
+    background-color: #0a58ca29;
+    border: none;
+    color: #FFF;
+    transition: all 0.5s ease-in-out
+}
+.crud-form .form-group input:focus,
+.crud-form .form-group textarea:focus{
+    background-color: #1b6ee84f
+}
+.crud-form .form-group .form-control.is-invalid{
+    background-color: #b438448a;
+}
+.form-control.is-invalid:focus{
+    color: #FFF;
+}
+.form-control.is-valid:focus{
+    border-color: #3083ff8c;
+}
+.crud-form .alert {
+    background-color:#0a58ca29 ;
+    color: #dc3545;
+    font-weight: bold;
+    border: navy;
+}
+.crud-form .btn{
+    color: #FFF;
+    font-weight: bold;
+    background-color: rgb(0 0 0 / 39%);
+    padding: 12px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.crud-form .btn:hover{
+    background-color:#0a58ca29 ;
+    border: 1px solid #fff;
+}
+
+.crud-table{
+    padding: 50px 0;
+}
+.crud-table .search{
+    position: relative;
+    margin: 50px auto;
+    width: 350px;
+}
+
+.crud-table .search i{
+    color: #FFF;
+    font-size: 20px;
+    position: absolute; 
+    right: 8px;
+    bottom: 5px;
+}
+.crud-table .search input{
+    background-color: #0a58ca29;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    color: #FFF;
+    transition: all 0.5s ease-in-out
+
+}
+.crud-table .search input::placeholder{
+    color: rgba(102, 161, 201, 0.521);
+}
+.crud-table .search input:hover{
+    border: #FFF solid 2px;
+    border-radius: 0;
+    transform: scale(1);
+}
+.crud-table .search input:focus{
+    background-color: #1b6ee84f
+}
+.crud-table .table thead{
+    border-bottom: #008 solid 3px;
+}
+.crud-table thead th{
+    font-size: 18px;
+    padding-bottom: 10px;
+
+}
+.crud-table .table tbody{
+    border-bottom: #00002c solid 2px;
+}
+.crud-table tbody td{
+    font-size: 15px;
+    padding: 10px auto;
+
+}
+.crud-table tbody i{
+    cursor: pointer;
+    transition: all 0.5s ease-in-out
+}
+.crud-table tbody i:hover{
+    font-size: 17px;
+}
+.crud-table tbody i.bi-pencil-square:hover{
+    color: aquamarine;
+}
+.crud-table tbody i.bi-trash:hover{
+    color: rgb(151, 16, 34);
+}
