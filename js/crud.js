@@ -67,13 +67,13 @@ function displayProducts(){
     let dataBox =``;
     for(let i = 0; i < productsContainer.length; i++){
         dataBox += 
-        `<tr>
-            <td> ${i+1} </td>
+        `<tr >
+            <th scope="row"> ${i+1} </th>
             <td>${productsContainer[i].name}</td>
             <td>${productsContainer[i].price}</td>
             <td>${productsContainer[i].category}</td>
             <td>${productsContainer[i].desc}</td>
-            <td><i class="bi bi-pencil-square " onclick="changeFormForUpdate(${i});"></i></td>
+            <td><i class="bi bi-pencil-square " data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="changeFormForUpdate(${i});"></i></td>
             <td><i id="delete" class="bi bi-trash deleteBtn" onclick="deleteProduct(${i});" ></i></td>
         </tr>`;
     }
@@ -103,13 +103,13 @@ function searchProduct(searchItem){
         if(productsContainer[i].name.toLowerCase().includes(searchItem.toLowerCase()) == true || productsContainer[i].category.toLowerCase().includes(searchItem.toLowerCase()) == true)
         {
             dataBox += 
-        `<tr>
-            <td> ${i+1} </td>
+            `<tr>
+            <th scope="row"> ${i+1} </th>
             <td>${productsContainer[i].name}</td>
             <td>${productsContainer[i].price}</td>
             <td>${productsContainer[i].category}</td>
             <td>${productsContainer[i].desc}</td>
-            <td><i class="bi bi-pencil-square " onclick="changeFormForUpdate(${i});"></i></td>
+            <td><i class="bi bi-pencil-square " data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="changeFormForUpdate(${i});"></i></td>
             <td><i id="delete" class="bi bi-trash deleteBtn" onclick="deleteProduct(${i});" ></i></td>
         </tr>`;
         }

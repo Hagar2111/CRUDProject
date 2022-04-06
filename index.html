@@ -14,63 +14,64 @@
     </head>
 
     <body>
-
-        <section class="crud-form m-auto py-5">
+        <div class="full-page">
             <div class="container">
-                <h1 class="text-center"> CRUD Operation</h1>
+                <section class="crud-form m-auto py-5">
+                    <h1 class="text-center"> CRUD Operation</h1>
 
-                <p class="page-alert text-center d-none">You didn't fill all of the fields! </p>
+                    <p class="page-alert text-center d-none">You didn't fill all of the fields! </p>
 
-                <div class="form-group">
-                    <label for="productName">Product Name</label>
-                    <input class="form-control" type="text" id="productName"> 
-                    <div class="alert alert-danger d-none " id="name-alert">
-                        <p>Product name must start with uppercase and be 3 letters min , 8 letters max.</p>
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input class="form-control" type="text" id="productName"> 
+                        <div class="alert alert-danger d-none " id="name-alert">
+                            <p>Product name must start with uppercase and be 3 letters min , 8 letters max.</p>
+                        </div>
+
                     </div>
+                    <div class="form-group">
+                        <label for="productPrice">Product Price</label>
+                        <input class="form-control" type="number" id="productPrice">   
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Product Category</label>
+                        <input class="form-control" type="text" id="productCategory"> 
+                        <div class="alert alert-danger d-none " id="category-alert">
+                            <p>Product Category must be 3 letters minimum , 10 letters max and it can be two words.</p>
+                        </div>  
+                    </div>
+                    <div class="form-group">
+                        <label for="productDesc">Product Description</label>
+                        <textarea class="form-control" type="text" id="productDesc"></textarea> 
+                    </div>
+                    <button class="btn" id="addProduct">Add Product</button>
+            </section>
 
-                </div>
-                <div class="form-group">
-                    <label for="productPrice">Product Price</label>
-                    <input class="form-control" type="number" id="productPrice">   
-                </div>
-                <div class="form-group">
-                    <label for="productCategory">Product Category</label>
-                    <input class="form-control" type="text" id="productCategory"> 
-                    <div class="alert alert-danger d-none " id="category-alert">
-                        <p>Product Category must be 3 letters minimum , 10 letters max and it can be two words.</p>
-                    </div>  
-                </div>
-                <div class="form-group">
-                    <label for="productDesc">Product Description</label>
-                    <textarea class="form-control" type="text" id="productDesc"></textarea> 
-                </div>
-                <button class="btn" id="addProduct">Add Product</button>
-            </div>
-        </section>
-
-        <section class="crud-table mt-5">
-            <div class="container">
-                <div class="search d-flex justify-content-center">
+            <section class="crud-table mt-5">
+                <div class="search ">
                     <i class="bi bi-search"></i>
                     <input placeholder="Search Name or Category..."  class="form-control" type="text" id="search-input" onkeyup="searchProduct(this.value)">   
                 </div>
+
                 <table class="table text-center my-3">
-                    <thead>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Descriptin</th>
-                        <th></th>
-                        <th></th>
+                    <thead >
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Descriptin</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Del</th>
+                        </tr>
                     </thead>
                     <tbody id="tableBody">
                         
                     </tbody>
                 </table>
+                </section>
             </div>
-        </section>
-
+        </div>
     
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
